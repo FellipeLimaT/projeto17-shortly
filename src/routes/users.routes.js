@@ -1,9 +1,9 @@
 import { Router } from "express";
-// import { authValidation } from "../middlewares/authorization.middleware.js";
+import { authValidation } from "../middlewares/authorization.middleware.js";
 
 const router = Router();
-/* 
+
 router.get("/users/me", authValidation, () => { });
-router.get("/ranking", () => { }); */
+router.get("/ranking", () => { });
 
 export default router;
