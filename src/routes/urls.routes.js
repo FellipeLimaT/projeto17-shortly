@@ -5,7 +5,7 @@ import { validateSchema } from "../middlewares/schemaValidator.js";
 
 const router = Router();
 
-router.post(
+/* router.post(
   "/urls/shorten",
   validateSchema(urlSchema),
   authValidation,
@@ -13,6 +13,6 @@ router.post(
 );
 router.get("/urls/:id", () => { });
 router.delete("/urls/:id", authValidation, () => { });
-router.get("/urls/open/:shortUrl", () => { });
+router.get("/urls/open/:shortUrl", () => { }); */
 
 export default router;
