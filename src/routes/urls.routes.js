@@ -1,5 +1,5 @@
 import { Router } from "express";
-// import { authValidation } from "../middlewares/authorization.middleware.js";
+import { authValidation } from "../middlewares/authorization.middleware.js";
 import urlSchema from "../schemas/urlSchema.js";
 import { validateSchema } from "../middlewares/schemaValidator.js";
 
@@ -9,10 +9,10 @@ const router = Router();
   "/urls/shorten",
   validateSchema(urlSchema),
   authValidation,
-  () => { }
-);
-router.get("/urls/:id", () => { });
-router.delete("/urls/:id", authValidation, () => { });
+  shortenUrl
+); */
+/* router.get("/urls/:id", () => { });
+//router.delete("/urls/:id", authValidation, () => { });
 router.get("/urls/open/:shortUrl", () => { }); */
 
 export default router;

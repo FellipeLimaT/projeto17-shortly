@@ -9,11 +9,11 @@ export async function signIn(req, res) {
     SELECT * FROM users WHERE email = $1 
   `, [email]);
   
-  if (!users) {
+  const [user] = users;
+  
+  if (!user) {
     return res.sendStatus(401);
   }
-  
-  const [user] = users;
 
   if (bcryptjs.compareSync(password, user.password)) {
     const token = uuid();
