@@ -62,6 +62,7 @@ CREATE TABLE public.shortens (
     url text NOT NULL,
     "shortUrl" text NOT NULL,
     "userId" integer NOT NULL,
+    "visitCount" integer DEFAULT 0 NOT NULL,
     "createdAt" timestamp without time zone DEFAULT now() NOT NULL
 );
 
